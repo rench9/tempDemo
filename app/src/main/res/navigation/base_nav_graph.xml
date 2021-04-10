@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.fillerform.phonepequiz.ui.LandingFragment"
+        android:label="LandingFragment">
+        <action
+            android:id="@+id/action_landingFragment_to_logoFragment"
+            app:destination="@id/logoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.fillerform.phonepequiz.ui.LogoFragment"
+        android:label="logo_fragment"
+        tools:layout="@layout/logo_fragment">
+        <argument
+            android:name="logo"
+            app:argType="com.fillerform.phonepequiz.repo.model.Logo"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
