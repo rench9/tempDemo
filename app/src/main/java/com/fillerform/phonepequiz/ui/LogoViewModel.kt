@@ -8,7 +8,8 @@ class LogoViewModel : ViewModel() {
     val logoPath = ObservableField<String>()
     val logoName = ObservableField<String>()
 
-    fun setLogo(logo: Logo) {
+    fun setLogo(logo: Logo?) {
+        logo ?: return
         this.logoPath.set(logo.imgUrl)
         this.logoName.set(logo.name)
     }
